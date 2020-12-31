@@ -30,3 +30,7 @@ The script checks for each frame of audio:
     
  The script generates two PWM, one where signal is in phase, and one where signal is 120 degrees out of phase.
  
+##
+This script is based on yuppi5's guidance on PWM waveform reproduction.
+
+https://yuppi5.hateblo.jp/entry/pwm-toc
