@@ -35,6 +35,12 @@ finalu.setparams(signalu.getparams())
 finalv.setparams(signalu.getparams())
 final.setparams(signalu.getparams())
 
+# The generated file is twice as fast for some reason
+# Workaround: half the sample rate
+finalu.setframerate(signalu.getframerate() / 2)
+finalv.setframerate(signalu.getframerate() / 2)
+final.setframerate(signalu.getframerate() / 2)
+
 signalu_data = numpy.frombuffer(signalu.readframes(-1),numpy.int16)
 signalv_data = numpy.frombuffer(signalv.readframes(-1),numpy.int16)
 carrier_data = numpy.frombuffer(carrier.readframes(-1),numpy.int16)
